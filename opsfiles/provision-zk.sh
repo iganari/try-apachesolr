@@ -12,7 +12,7 @@ cp -ar ${ZKR} /opt/
 ln -s /opt/${ZKR} /opt/zookeeper
 cd /opt/zookeeper
 cp -a ./conf/zoo{_sample,}.cfg
-cat /srv/try-apachesolr/zoo.cfg >> /opt/zookeeper/conf/zoo.cfg 
+# cat /srv/try-apachesolr/zoo.cfg >> /opt/zookeeper/conf/zoo.cfg 
 # ./bin/zkServer.sh start
 }
 
