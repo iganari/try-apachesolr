@@ -12,3 +12,4 @@ cat /srv/try-apachesolr/zoo.cfg >> /var/lib/zookeeper/conf/zoo.cfg
 mkdir -p /tmp/zookeeper
 hostname > /tmp/zookeeper/myid
 
+# cd /opt/solr/solr-5.1.0 
