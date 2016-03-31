@@ -1,5 +1,7 @@
 #!/bin/bash
 
+st -xe
+
 : "install Zookeeper" && {
 ZKR='zookeeper-3.4.8'
 
