@@ -21,6 +21,5 @@ fi
 }
 
 : "install basic command" && {
-yum install -y vim-enhanced telnet 
-
+yum install -y vim-enhanced telnet nc
 }
