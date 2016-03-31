@@ -1,0 +1,8 @@
+---
+# 
+
+## - name: restart ntp
+##   service: name=ntpd state=restarted
+
+- name: restart network
+  service: name=network state=restarted
