@@ -18,7 +18,7 @@ cp -a ./conf/zoo{_sample,}.cfg
 
 : "setting Zookeeper" && {
 mkdir -p /tmp/zookeeper
-hostname > /tmp/zookeeper/myid
+hostname | sed 's/svr0//g' > /tmp/zookeeper/myid
 }
 
 
