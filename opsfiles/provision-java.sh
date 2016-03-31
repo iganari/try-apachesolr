@@ -19,3 +19,8 @@ else
   ### /home/vagrantに保存される
 fi
 }
+
+: "install basic command" && {
+yum install -y vim-enhanced telnet 
+
+}
