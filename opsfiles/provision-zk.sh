@@ -13,10 +13,16 @@ ln -s /opt/${ZKR} /opt/zookeeper
 cd /opt/zookeeper
 cp -a ./conf/zoo{_sample,}.cfg
 cat /srv/try-apachesolr/zoo.cfg >> /opt/zookeeper/conf/zoo.cfg 
-./bin/zkServer.sh start
+# ./bin/zkServer.sh start
 }
 
 : "setting Zookeeper" && {
 mkdir -p /tmp/zookeeper
 hostname > /tmp/zookeeper/myid
+}
+
+
+: "restart zk" && {
+cd /opt/zookeeper
+./bin/zkServer.sh start
 }
