@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
   end
   config.vm.define :svr02 do |server|
     ### determined specific IP.
-    server.vm.network "private_network", ip: "192.168.33.232"
+    server.vm.network "private_network", ip: "192.168.33.72"
     ### vbox name
     server.vm.hostname = 'svr02'
     ### box setting
@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
   end
   config.vm.define :svr03 do |server|
     ### determined specific IP.
-    server.vm.network "private_network", ip: "192.168.33.72"
+    server.vm.network "private_network", ip: "192.168.33.73"
     ### vbox name
     server.vm.hostname = 'svr03'
     ### box setting
@@ -43,8 +43,9 @@ Vagrant.configure(2) do |config|
     :mount_options => ['dmode=755,fmode=644'] 
 
   # config.vm.provision :shell, :path => "ssh/init.sh"
-  config.vm.provision :shell, :path => "provision.sh"
-  config.vm.provision :shell, :path => "provision2.sh"
+  config.vm.provision :shell, :path => "provision-java.sh"
+  # config.vm.provision :shell, :path => "provision-solr.sh"
+  config.vm.provision :shell, :path => "provision-zk.sh"
 
   ### config.vm.provision "ansible" do |ansible|
   ###   ansible.playbook = "playbook/site.yml"
