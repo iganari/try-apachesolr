@@ -21,5 +21,5 @@ fi
 }
 
 : "install basic command" && {
-yum install -y vim-enhanced telnet nc
+yum install -y vim-enhanced telnet nc lsof
 }
