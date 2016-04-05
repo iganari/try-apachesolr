@@ -21,5 +21,12 @@ fi
 }
 
 : "install basic command" && {
-yum install -y vim-enhanced telnet nc
+yum install -y vim-enhanced telnet nc lsof
+}
+
+
+: "setting date" && {
+rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
 }
