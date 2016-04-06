@@ -14,7 +14,7 @@ tar zxvf ${ZKR}.tar.gz
 cp -ar ${ZKR} /opt/
 ln -s /opt/${ZKR} ${Z_DIR}
 cd ${Z_DIR}
-ln -s ${V_DIR}/zoo.cfg ${Z_DIR}/conf/zoo.cfg
+ln -s ${V_DIR}/template/zookeeper/conf/zoo.cfg ${Z_DIR}/conf/zoo.cfg
 ./bin/zkServer.sh start
 }
 
