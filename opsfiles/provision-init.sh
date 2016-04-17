@@ -40,7 +40,8 @@ zk() {
   Z_DIR='/opt/zookeeper'
   
   cd /var/tmp
-  wget http://ftp.meisei-u.ac.jp/mirror/apache/dist/zookeeper/${ZKR}/${ZKR}.tar.gz
+  # wget http://ftp.meisei-u.ac.jp/mirror/apache/dist/zookeeper/${ZKR}/${ZKR}.tar.gz
+  wget http://ftp.riken.jp/net/apache/zookeeper/${ZKR}/${ZKR}.tar.gz
   tar zxvf ${ZKR}.tar.gz
   
   cp -ar ${ZKR} /opt/
@@ -68,7 +69,8 @@ solr() {
   VERSION='5.5.0'
   
   cd ${TMP_DIR}
-  wget http://ftp.meisei-u.ac.jp/mirror/apache/dist/lucene/solr/${VERSION}/solr-${VERSION}.tgz
+  # wget http://ftp.meisei-u.ac.jp/mirror/apache/dist/lucene/solr/${VERSION}/solr-${VERSION}.tgz
+  wget http://ftp.riken.jp/net/apache/lucene/solr/${VERSION}/solr-${VERSION}.tgz
   tar zxvf ${TMP_DIR}/solr-${VERSION}.tgz
   sh ${TMP_DIR}/solr-${VERSION}/bin/install_solr_service.sh solr-${VERSION}.tgz
   ln -s ${V_DIR}/template/solr/etc/solr.conf  /etc/solr.conf
